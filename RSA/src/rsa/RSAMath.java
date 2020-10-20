@@ -2,7 +2,8 @@ package rsa;
 
 public class RSAMath {
 
-    /** Checks if a number is prime iteratively, there is probably a more efficient approach */
+    /** Checks if a number is prime iteratively, there is probably a more efficient approach </br>
+     * Time complexity O(x/2) */
     public static boolean isPrime(int x) {
         for (int i= 2; i < x / 2; i++ ) {
             if (x % i == 0) { return false; }
@@ -37,7 +38,7 @@ public class RSAMath {
     }
 
     /** Uses binary exponentiation to deal with overflow </br>
-     * Time complexity O(logn) */
+     * Time complexity O((logn)^2 * log(n)) */
     public static long fastExpo(long x, int y, int n) {
         // Initialize result
         long res= 1;
